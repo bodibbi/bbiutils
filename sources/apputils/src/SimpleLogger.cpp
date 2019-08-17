@@ -37,3 +37,9 @@ void SimpleLogger::log(LogLevel level, const string& message)
         break;
     }
 }
+
+GenericLogger& SimpleLogger::getInstance()
+{
+    static SimpleLogger logger;
+    return logger;
+}
